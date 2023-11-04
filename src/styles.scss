@@ -1,12 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
-:root {
+html {
   box-sizing: border-box;
-  height: 100%;
-  width: 100%;
   font-size: 62.5%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .router-container {
-  min-height: 90vh;
+  min-height: 80vh;
+}
+
+a {
+  text-decoration: none !important;
+  color: #444 !important;
+  transition: .5s !important;
+  color: #DEC129 !important;
 }
