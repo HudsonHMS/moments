@@ -16,3 +16,48 @@ a {
   transition: .5s !important;
   color: #DEC129 !important;
 }
+
+/*FORMS*/
+
+form {
+  width: 50vw;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: .4rem;
+}
+
+
+.form-group input[type="text"],
+.form-group textarea {
+  padding: 1.6rem;
+  color: #777;
+}
+
+input[type="submit"] {
+  background-color: #EFEFEF;
+  border: .2rem solid transparent;
+  padding: .6rem 1rem;
+  font-size: bold;
+  cursor: pointer;
+  transition: .5s;
+}
+
+input[type="submit"]:hover {
+  color: #DEC129;
+  border-color: #DEC129;
+  background-color: transparent;
+}
+
+.display-none {
+  display: none;
+}

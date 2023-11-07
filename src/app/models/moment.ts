@@ -5,5 +5,5 @@ export interface Moment {
   imagem: string;
   created_at?: string;
   updated_at?: string;
-  comentarios: Comment[];
+  comentarios?: Comment[];
 }

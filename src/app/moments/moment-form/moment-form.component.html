@@ -1,0 +1,21 @@
+<form (ngSubmit)="cadastrarMoment($event)" [formGroup]="momentForm" #formDir="ngForm">
+  <div class="form-group">
+    <label for="titulo">Titulo:</label>
+    <input formControlName="title" type="text" name="titulo" id="titulo" placeholder="Coloque um titulo" required>
+    <small *ngIf="title?.invalid && formDir.submitted"  class="validationError">O campo titulo é obrigatório</small>
+  </div>
+  <div class="form-group">
+    <label for="description">Descrição:</label>
+    <textarea formControlName="description" name="description" id="" cols="100" rows="10"
+      placeholder="Oque aconteceu lá?" required></textarea>
+      <small *ngIf="description?.invalid && formDir.submitted"  class="validationError">O campo descrição é obrigatório</small>
+  </div>
+  <div class="form-group">
+    <label for="imagem">Coloque a foto que mais marcou</label>
+    <input type="file" name="imagem" id="imagem" (change)="mostrarImagem($event)">
+  </div>
+  <div class="tumbs-container" #divDisplayImg [ngClass]="{'display-none':!displayImage}">
+    <img  class="tumbs" src="" alt="Imagem selecionada" #momentImg>
+  </div>
+  <input type="submit" value="{{ btnText }}">
+</form>
