@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
+import { MessageComponent } from './shared/messages/message/message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SobreComponent
+    SobreComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
