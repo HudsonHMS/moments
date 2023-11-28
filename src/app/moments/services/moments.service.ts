@@ -9,6 +9,7 @@ import { Observable, take, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class MomentsService {
+  private url = `${environment.baseApiUrl}moments`;
 
   constructor(private http: HttpClient) { }
 
@@ -17,8 +18,15 @@ export class MomentsService {
     if( !(moment.get('imagem') instanceof File) ) {
       moment.delete('imagem');
     }
-    const url = `${environment.baseApiUrl}moments`;
-    return this.http.post<Response<Moment|null>>(url, moment).pipe(take(1));
+    return this.http.post<Response<Moment|null>>(this.url, moment).pipe(take(1));
+  }
+
+  public getMoments(): Observable<Response<Moment[]>> | null {
+    try {
+      return this.http.get<Response<Moment[]>>(`${this.url}`).pipe( take(1) );
+    } catch ( err ) {
+      return null;
+    }
   }
 
 }

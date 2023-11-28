@@ -1,9 +1,11 @@
+import { MessagesService } from 'src/app/services/messages.service';
 
 import { MomentsService } from './../services/moments.service';
 import { Observable } from 'rxjs';
 import { Moment } from './../../models/moment';
 import { Component } from '@angular/core';
 import { Response } from 'src/app/models/response';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-newmoment',
@@ -19,7 +21,9 @@ export class NewmomentComponent {
     msg: ''
   };
 
-  constructor( private momentService: MomentsService) {}
+  constructor( private momentService: MomentsService,
+               private messagesService:MessagesService,
+               private router: Router) {}
 
   ngOnInit(): void {
     this.btntext = "Compartilhar";
@@ -39,6 +43,10 @@ export class NewmomentComponent {
         this.respon.msg = "OK"
       }
     );
+    if( this.respon.sucesso ) {
+      this.messagesService.show('Momento cadastrado com sucesso');
+      this.router.navigate(['/']);
+    }
     return this.respon;
   }
 }

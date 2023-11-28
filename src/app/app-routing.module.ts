@@ -1,3 +1,4 @@
+import { MomentsComponent } from './moments/moments/moments.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -6,7 +7,7 @@ import { SobreComponent } from './pages/sobre/sobre.component';
 const routes: Routes = [
   {
     path: '',
-    component: SobreComponent
+    component: MomentsComponent
   },
   {
     path: 'sobre',

@@ -1,1 +1,27 @@
-<p>moments works!</p>
+<section class="home-container">
+  <h1>
+    Veja o que estão compartilhando!
+  </h1>
+  <!-- Form de busca-->
+  <div *ngIf="moments.length > 0; else noMoments">
+    <div class="moments-container">
+      <div class="moment" *ngFor="let moment of moments">
+        <img src="{{baseUrl}}uploads/{{moment.imagem}}" alt="">
+        <h3>
+          {{ moment.title }}
+        </h3>
+        <p class="date">
+          <span>Publicado em: </span> {{ moment.created_at | date:"dd/MM/yyyy" }}
+        </p>
+        <p class="comentarios">
+          Comentarios: {{ moment.comments!.length }}
+        </p>
+        <a routerLink="/moments/{{moment.id}}">Detalhes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #noMoments>
+  <h1>Não existem momentos cadastrados no sistema</h1>
+</ng-template>

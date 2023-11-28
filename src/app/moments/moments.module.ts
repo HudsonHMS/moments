@@ -7,6 +7,7 @@ import { MomentsComponent } from './moments/moments.component';
 import { NewmomentComponent } from './newmoment/newmoment.component';
 import { MomentFormComponent } from './moment-form/moment-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DetalheMomentComponent } from './detalhe-moment/detalhe-moment.component';
 
 
 
@@ -14,7 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     MomentsComponent,
     NewmomentComponent,
-    MomentFormComponent
+    MomentFormComponent,
+    DetalheMomentComponent
   ],
   imports: [
     CommonModule,

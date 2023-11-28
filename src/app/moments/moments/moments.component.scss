@@ -1,0 +1,53 @@
+div, p {
+  font-size: 1.75rem;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-container h1 {
+  margin-bottom: .5rem;
+}
+
+.moments-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.moment {
+  width: 32%;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.moment img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.moment h3, .moment p {
+  margin-bottom: 1rem;
+}
+
+.moment .date {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+a {
+  transition: .5s;
+  padding: .5rem;
+}
+
+a:hover {
+  background-color: #efefef;
+}

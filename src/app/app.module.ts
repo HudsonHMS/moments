@@ -8,6 +8,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { MessageComponent } from './shared/messages/message/message.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MessageComponent } from './shared/messages/message/message.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MomentsModule
+    MomentsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

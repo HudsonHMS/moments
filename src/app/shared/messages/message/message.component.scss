@@ -1,0 +1,29 @@
+.message{
+  position: fixed;
+  top: 3rem;
+  width: 50%;
+  margin-left: 50%;
+  left: -25%;
+  z-index: 10;
+  background-color: #FFF;
+  border: 3px solid #DEC129;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: .5s;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between
+}
+
+.message-header button {
+  padding: 1rem;
+  outline: none;
+  cursor: pointer
+}
+
+.message p {
+  font-size: 1.65rem
+}
