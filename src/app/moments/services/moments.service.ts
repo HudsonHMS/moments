@@ -29,4 +29,12 @@ export class MomentsService {
     }
   }
 
+  public getMoment( id: number ): Observable<Response<Moment>> | null {
+    try {
+      return this.http.get<Response<Moment>>(`${this.url}/${id}`).pipe( take(1) );
+    } catch ( err ) {
+      return null;
+    }
+  }
+
 }

@@ -51,3 +51,28 @@ a {
 a:hover {
   background-color: #efefef;
 }
+
+.search-ontainer {
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.search-ontainer form {
+  position: relative;
+  width: 45%;
+  margin-top: 20px;
+}
+
+.search-ontainer fa-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.search-ontainer form > input {
+  padding: 10px 30px;
+  width: 100%;
+  outline: none;
+  border-radius: 6px;
+}

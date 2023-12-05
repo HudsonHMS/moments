@@ -2,7 +2,12 @@
   <h1>
     Veja o que estão compartilhando!
   </h1>
-  <!-- Form de busca-->
+  <div class="search-ontainer">
+    <form>
+      <fa-icon [icon]="searchIcon"></fa-icon>
+      <input type="text" placeholder="Ou busque um momento" (input)="buscarMomentos($event)">
+    </form>
+  </div>
   <div *ngIf="moments.length > 0; else noMoments">
     <div class="moments-container">
       <div class="moment" *ngFor="let moment of moments">
